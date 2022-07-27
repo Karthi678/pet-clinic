@@ -15,32 +15,36 @@
 	</parent>
 	<groupId>com.SpringFramework</groupId>
 	<artifactId>pet-clinic</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>pet-clinic</name>
 	<description>Pet clinic Application</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
-	<dependencies>
-
-
-	</dependencies>
 
 	<build>
+
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
 				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
+					<goals>install</goals>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+
+<scm>
+	<developerConnection>
+		scm:git:git@github.com:Karthi678/pet-clinic.git
+	</developerConnection>
+</scm>
 
 </project>
